@@ -27,7 +27,7 @@ public class HomeController {
 	@GetMapping("/greeting")
 		public String greetingForm(Model model) {
 			Count count = new Count();
-			count.count = count.count + 1;
+			count.count = (count.count) + 1;
 			model.addAttribute("greeting", new Greeting());
 			model.addAttribute("count", count);
 			
@@ -58,12 +58,12 @@ public class HomeController {
 	public String questionFormPOST(String answer, Model model) {
 		System.out.println("The answer is " + answer);
 		
+		Count count = new Count();
 		GetQuestion getQuestion = new GetQuestion();
 		QuestionTrueFalse qtf = getQuestion.nextQuestion();
 		model.addAttribute("QuestionTrueFalse", qtf);
 
-		Count count = new Count();
-		Count.count = Count.count + 1;
+		count.count = count.count + 1;
 		model.addAttribute("count", count);
 		MyString myString = new MyString();
 		myString.setMyString(getQuestion.nextQuestion().getQuestion());
