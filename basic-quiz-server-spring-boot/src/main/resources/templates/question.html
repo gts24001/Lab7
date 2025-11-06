@@ -6,9 +6,14 @@
 </head>
 <body>
 	<h1 id="my-element">Quiz question</h1>
-    <form action="/get_question" method="post">
-        <div th:object="${myString}">
-            <span>Question</span><span th:text="${count.count}">:</span> <span th:text="*{myString}"></span>
+    <form action="/get_question" method="post">  
+         <div>
+            <div th:object="${count}">
+                <p>Question: <span th:text="*{count}"></span></p>
+            </div>
+            <div th:object="${myString}">
+                <span th:text="*{getMyString()}"></span>
+            </div>
         </div>
         <input type="radio" id="trueOption" name="answer" value="true">
         <label for="trueOption">True</label><br>

@@ -10,6 +10,4 @@ public class MyString {
     public String getMyString() {
         return myString;
     }
-
-
 }
