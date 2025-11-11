@@ -7,6 +7,10 @@
 > mvn dependency:purge-local-repository <br />
 > mvn dependency:tree <br />
 >> mvn spring-boot:run <br />
-
+>
+>
+> or 
+> ./mvnw clean install
+> ./mvnw spring-boot:run
 > 
 

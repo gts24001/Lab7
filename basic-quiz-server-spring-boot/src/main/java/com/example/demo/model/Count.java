@@ -1,6 +1,6 @@
 package com.example.demo.model;
 
-public class Count {
+public class Count { // implements java.io.Serializable {
     
     public int count = 0;
 
@@ -11,5 +11,7 @@ public class Count {
     public void setCount(int count) {
         this.count = count;
     }
-
+   // public void inc() {
+     //   this.count++;
+  //  }
 }
